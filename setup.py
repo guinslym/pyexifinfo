@@ -5,7 +5,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 setup(
-    name='Exifinfo',
+    name='PyExifinfo',
 
     version='0.1.1',
 
