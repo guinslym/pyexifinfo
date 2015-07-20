@@ -1,0 +1,2 @@
+# exifinfo
+Another exiftool wrarpper
