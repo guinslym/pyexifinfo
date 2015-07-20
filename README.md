@@ -3,6 +3,9 @@ PyExifInfo
 
 Yet Another python wrapper for Phil Harvey' Exiftool
 
+##Installation
+		[sudo] pip install pyexifinfo
+
 ##Usage
 
 ```python
@@ -15,5 +18,4 @@ p.get_json(filename) #retrieve a json representation of this file exif
 
 ###Note
 This package is currently in development
-
 

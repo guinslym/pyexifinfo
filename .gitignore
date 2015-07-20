@@ -5,3 +5,5 @@ man_exiftool.txt
 *.pyc
 build/
 .DS_Store
+.egg-info
+PyExifinfo.egg-info/

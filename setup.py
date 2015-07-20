@@ -19,7 +19,7 @@ setup(
     license='GNU GPLv2',
 
     classifiers=[
-        'Development Status :: 2 - Production/Stable',
+        'Development Status :: 5 - Production/Stable',
 
         'Intended Audience :: Developers',
 
