@@ -1,6 +1,8 @@
 import subprocess, json, os
 
 
+this_file_exist = lambda x: os.path.exists(filename)
+
 def command_line(cmd):
     try:
         s = subprocess.check_output(cmd)
@@ -42,7 +44,6 @@ def get_csv(filename):
 
 def get_xml(filename):
     '''Return a XML representation of the exif
-
     '''
     filename = os.path.abspath(filename)
     s = command_line(['exiftool', '-G', '-X', '-sort', filename])

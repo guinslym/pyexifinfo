@@ -9,9 +9,9 @@ setup(
 
     version='0.1.1',
 
-    description='A python wrapper for exiftool',
+    description="Yet another simple wrapper for ExifTool",
 
-    url='https://github.com/guinslym/exifinfo',
+    url='https://github.com/guinslym/pyexifinfo',
 
     author='Guinslym',
     author_email='guinslym@gmail.com',
@@ -19,7 +19,7 @@ setup(
     license='GNU GPLv2',
 
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 2 - Production/Stable',
 
         'Intended Audience :: Developers',
 

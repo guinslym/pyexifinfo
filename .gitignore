@@ -3,3 +3,5 @@
 /totrash
 man_exiftool.txt
 *.pyc
+build/
+.DS_Store
