@@ -7,3 +7,5 @@ build/
 .DS_Store
 .egg-info
 PyExifinfo.egg-info/
+*.egg-info/
+dist/
