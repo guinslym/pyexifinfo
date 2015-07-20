@@ -3,12 +3,21 @@ import subprocess, json, os
 
 this_file_exist = lambda x: os.path.exists(filename)
 
+####HELPER section
+
 def command_line(cmd):
     try:
         s = subprocess.check_output(cmd)
         return s.strip()
-    except:
+    except subprocess.CalledProcessError:
         return 0
+
+def information(filename):
+    """Returns the file exif"""
+    result = get_json(filename)
+    result = result[0]
+    return result
+######################
 
 def ver():
     '''Retrieve the current version of exiftool installed on your computer
@@ -52,3 +61,27 @@ def get_xml(filename):
     else:
         return 0
         
+def fileType(filename=filename):
+    """Returns the file extension"""
+    result =  information(filename)
+    return result.get('File:FileType', 0)
+
+def mimeType(filename=filename):
+    """Returns the file extension"""
+    result =  information(filename)
+    return result.get('File:MIMEType', 0)
+
+def imageSize(filename=filename):
+    """Returns the file size"""
+    result =  information(filename)
+    return result.get('Composite:ImageSize', 0)
+
+def imageWidth(filename=filename):
+    """Returns the file width"""
+    result =  information(filename)
+    return result.get('PNG:ImageWidth', 0)    
+
+def imageHeight(filename=filename):
+    """Returns the file height"""
+    result =  information(filename)
+    return result.get('PNG:imageHeight', 0) 
