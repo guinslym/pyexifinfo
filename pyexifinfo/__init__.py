@@ -61,27 +61,27 @@ def get_xml(filename):
     else:
         return 0
         
-def fileType(filename=filename):
+def fileType(filename):
     """Returns the file extension"""
     result =  information(filename)
     return result.get('File:FileType', 0)
 
-def mimeType(filename=filename):
+def mimeType(filename):
     """Returns the file extension"""
     result =  information(filename)
     return result.get('File:MIMEType', 0)
 
-def imageSize(filename=filename):
+def imageSize(filename):
     """Returns the file size"""
     result =  information(filename)
     return result.get('Composite:ImageSize', 0)
 
-def imageWidth(filename=filename):
+def imageWidth(filename):
     """Returns the file width"""
     result =  information(filename)
     return result.get('PNG:ImageWidth', 0)    
 
-def imageHeight(filename=filename):
+def imageHeight(filename):
     """Returns the file height"""
     result =  information(filename)
     return result.get('PNG:imageHeight', 0) 
