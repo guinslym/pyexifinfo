@@ -18,7 +18,9 @@ def ver():
         return 0
 
 def get_json(filename):
-    '''Return a json value of the exif'''
+    '''Return a json value of the exif
+
+    '''
     filename = os.path.abspath(filename)
     s = command_line(['exiftool', '-G', '-j', '-sort', filename])
     if s:
@@ -28,7 +30,9 @@ def get_json(filename):
 	  return 0
 
 def get_csv(filename):
-    '''Return a csv representation of the exif'''
+    '''Return a csv representation of the exif
+    arg: filename
+    '''
     filename = os.path.abspath(filename)
     s = command_line(['exiftool', '-G', '-csv', '-sort', filename])
     if s:
@@ -37,7 +41,9 @@ def get_csv(filename):
         return 0
 
 def get_xml(filename):
-    '''Return a XML representation of the exif'''
+    '''Return a XML representation of the exif
+
+    '''
     filename = os.path.abspath(filename)
     s = command_line(['exiftool', '-G', '-X', '-sort', filename])
     if s:
