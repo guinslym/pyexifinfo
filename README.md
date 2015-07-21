@@ -25,13 +25,13 @@ ourceFile': u'/home/laptop/python-logo.png', u'PNG:ColorType': u'RGB with Alpha'
 from pyexifinfo get_csv, get_xml, fileType, mimeType, imageSize, imageWidth, imageHeight
 filename = 'python-logo.png'
 
-result = pei.get_csv(filename)
-result = pei.get_xml(filename)
-result = pei.fileType(filename)
-result = pei.mimeType(filename)
-result = pei.imageSize(filename)
-result = pei.imageWidth(filename)
-result = pei.imageHeight(filename)
+result = get_csv(filename)
+result = get_xml(filename)
+result = fileType(filename)
+result = mimeType(filename)
+result = imageSize(filename)
+result = imageWidth(filename)
+result = imageHeight(filename)
 ```
 
 

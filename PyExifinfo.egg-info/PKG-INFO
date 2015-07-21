@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: PyExifinfo
-Version: 0.1.1
+Version: 0.1.2
 Summary: Yet another simple wrapper for ExifTool
 Home-page: https://github.com/guinslym/pyexifinfo
 Author: Guinslym
