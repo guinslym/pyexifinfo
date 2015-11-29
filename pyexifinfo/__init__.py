@@ -38,7 +38,7 @@ def get_json(filename):
         s = s.rstrip('\r\n')
         return json.loads(s)
     else:
-	  return 0
+        return 0
 
 def get_csv(filename):
     '''Return a csv representation of the exif
