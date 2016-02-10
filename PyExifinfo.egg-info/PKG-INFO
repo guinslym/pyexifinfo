@@ -1,7 +1,7 @@
 Metadata-Version: 1.1
 Name: PyExifinfo
-Version: 0.1.2
-Summary: Yet another simple wrapper for ExifTool
+Version: 0.1.5
+Summary: Simple Metadata extraction using Exiftool
 Home-page: https://github.com/guinslym/pyexifinfo
 Author: Guinslym
 Author-email: guinslym@gmail.com
