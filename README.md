@@ -7,7 +7,8 @@ ExifTool is the corner stone library to look for when you need to extract Exif o
 (French) ExifTool est la package de référence quand il s'agit d'analyser l'Exif ou les métadonnées d'une photo
 
 ##Installation
-		[sudo] pip install pyexifinfo
+		[sudo] pip install -U pyexifinfo
+		#sudo is optionnal
 
 ###Requirements
 [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) by Phil Harvey. Read, Write and Edit Image Metadata Information!
