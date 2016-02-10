@@ -84,8 +84,5 @@ def mimeType(filename):
     result =  information(filename)
     return result.get('File:MIMEType', 0)
 
-def imageSize(filename):
-    """Returns the file size"""
-    result =  information(filename)
-    return result.get('Composite:ImageSize', 0)
+
 

@@ -36,6 +36,3 @@ def test_get_mimeType():
     a = p.mimeType("tests/"+image)
     assert a.lower() == 'image/png'
 
-def test_get_imageSize():
-    a = p.imageSize("tests/"+image)
-    assert a.lower() == '601x203'
