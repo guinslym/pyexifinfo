@@ -9,7 +9,7 @@ setup(
 
     version='0.1.5',
 
-    description="Yet another simple wrapper for ExifTool",
+    description="Simple Metadata extraction using Exiftool",
 
     url='https://github.com/guinslym/pyexifinfo',
 

@@ -1,12 +1,12 @@
 PyExifInfo
 ===================
 
-|Build Status| |Wheel| |Downloads| |Drone| |Coveralls| |Code Climate|
-
 
 Yet Another python wrapper for Phil Harvey' Exiftool
 ExifTool is the corner stone library to look for when you need to extract Exif or other types of metadata whithin a picture.
 ExifTool est la package de référence quand il s'agit d'analyser l'Exif ou les métadonnées d'une photo
+
+https://github.com/guinslym/pyexifinfo
 
 Installation
 ------------
