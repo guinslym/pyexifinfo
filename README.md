@@ -41,7 +41,7 @@ print( json.dumps(data, sort_keys=True,
         "File:FileAccessDate": "2016:02:10 00:28:11-05:00",
         "File:FileInodeChangeDate": "2016:02:10 00:27:30-05:00",
         "File:FileModifyDate": "2016:02:10 00:27:30-05:00",
-        "File:FileName": "python.png",
+        "File:FileName": "python-logo.png",
         "File:FilePermissions": "rw-rw-r--",
         "File:FileSize": "82 kB",
         "File:FileType": "PNG",
@@ -59,7 +59,7 @@ print( json.dumps(data, sort_keys=True,
         "PNG:PixelsPerUnitY": 2800,
         "PNG:SignificantBits": "8 8 8 8",
         "PNG:Software": "Macromedia Fireworks MX 2004",
-        "SourceFile": "/home/laptop/Documents/python.png"
+        "SourceFile": "/home/laptop/Documents/python-logo.png"
     }
 ]
 ```
@@ -73,7 +73,7 @@ print(data)
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
 
-<rdf:Description rdf:about='/home/laptop/Documents/python.png'
+<rdf:Description rdf:about='/home/laptop/Documents/python-logo.png'
   xmlns:et='http://ns.exiftool.ca/1.0/' et:toolkit='Image::ExifTool 9.46'
   xmlns:ExifTool='http://ns.exiftool.ca/ExifTool/1.0/'
   xmlns:System='http://ns.exiftool.ca/File/System/1.0/'
@@ -85,7 +85,7 @@ print(data)
  <System:FileAccessDate>2016:02:10 00:28:11-05:00</System:FileAccessDate>
  <System:FileInodeChangeDate>2016:02:10 00:27:30-05:00</System:FileInodeChangeDate>
  <System:FileModifyDate>2016:02:10 00:27:30-05:00</System:FileModifyDate>
- <System:FileName>python.png</System:FileName>
+ <System:FileName>python-logo.png</System:FileName>
  <System:FilePermissions>rw-rw-r--</System:FilePermissions>
  <System:FileSize>82 kB</System:FileSize>
  <File:FileType>PNG</File:FileType>

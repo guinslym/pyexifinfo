@@ -6,5 +6,4 @@ PyExifinfo.egg-info/dependency_links.txt
 PyExifinfo.egg-info/pbr.json
 PyExifinfo.egg-info/top_level.txt
 pyexifinfo/__init__.py
-pyexifinfo/hello.py
 pyexifinfo/pyexifinfo.py
