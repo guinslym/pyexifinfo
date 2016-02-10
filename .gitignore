@@ -12,3 +12,4 @@ PyExifinfo.egg-info/
 dist/
 PyExifinf*/*
 *.json
+*hello.py
