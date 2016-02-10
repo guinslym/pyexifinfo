@@ -41,9 +41,6 @@ result = get_csv(filename)
 result = get_xml(filename)
 result = fileType(filename)
 result = mimeType(filename)
-result = imageSize(filename)
-result = imageWidth(filename)
-result = imageHeight(filename)
 
 
 

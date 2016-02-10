@@ -57,6 +57,8 @@ def get_csv(filename):
     filename = os.path.abspath(filename)
     s = command_line(['exiftool', '-G', '-csv', '-sort', filename])
     if s:
+        #convert bytes to string
+        s = s.decode('utf-8')
         return s
     else:
         return 0
@@ -66,6 +68,8 @@ def get_xml(filename):
     filename = os.path.abspath(filename)
     s = command_line(['exiftool', '-G', '-X', '-sort', filename])
     if s:
+        #convert bytes to string
+        s = s.decode('utf-8')
         return s
     else:
         return 0

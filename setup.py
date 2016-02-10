@@ -7,7 +7,7 @@ here = path.abspath(path.dirname(__file__))
 setup(
     name='PyExifinfo',
 
-    version='0.1.2',
+    version='0.1.5',
 
     description="Yet another simple wrapper for ExifTool",
 
