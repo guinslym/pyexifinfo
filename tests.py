@@ -17,22 +17,22 @@ def test_version_is_greater_than_8():
     assert a >= 8
 
 def test_get_json():
-    a = p.get_json("tests/"+image)
+    a = p.get_json("tests_pyexifinfo/"+image)
     assert len(a[0]) == 25
 
 def test_get_csv():
-    a = p.get_csv("tests/"+image)
+    a = p.get_csv("tests_pyexifinfo/"+image)
     assert a[0:10] == "SourceFile"
 
 def test_get_xml():
-    a = p.get_xml("tests/"+image)
+    a = p.get_xml("tests_pyexifinfo/"+image)
     assert a[0:5] == "<?xml"
 
 def test_get_fileType():
-    a = p.fileType("tests/"+image)
+    a = p.fileType("tests_pyexifinfo/"+image)
     assert a.lower() == 'png'
 
 def test_get_mimeType():
-    a = p.mimeType("tests/"+image)
+    a = p.mimeType("tests_pyexifinfo/"+image)
     assert a.lower() == 'image/png'
 
