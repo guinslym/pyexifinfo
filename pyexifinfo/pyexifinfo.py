@@ -22,7 +22,7 @@ def check_if_this_file_exist(filename):
     actually exists and if it's not a Directory
     
     Arguments:
-        filename {[type]} -- filename
+        filename {string} -- filename
 
     Return:
         True  : if it's not a directory and if this file exist
@@ -36,25 +36,10 @@ def check_if_this_file_exist(filename):
     a_directory = os.path.isdir(filename)
 
     result = this_file_exist and not a_directory
-    return result
-
-def exit_if_this_file_does_not_exit(filename):
-    """Exit if this file does not exit
-    
-    Upon the previous function if This filename does
-    not exist or if it's a directory EXIT this application
-    
-    Arguments:
-        filename {[type]} -- your filename
-    """
-    result = check_if_this_file_exist(filename)
-    if result:
-        pass
+    if result == False:
+        raise ValueError('The filename given was either non existent or was a directory')
     else:
-        print(":( The filename that you gave me either does not exist")
-        print("or it's a directory.")
-        print("The given filename is: {0}".format(os.path.abspath(filename)))
-        raise ValueError "Encountered error"
+        return result
 
 ####HELPER section
 
@@ -76,15 +61,12 @@ def command_line(cmd):
 
 def information(filename):
     """Returns the file exif"""
-    exit_if_this_file_does_not_exit(filename)
+    check_if_this_file_exist(filename)
     filename = os.path.abspath(filename)
     result = get_json(filename)
-    if not result:
-        message = 'The filename given is either a directory or \it \'s'
-        raise ValueError  message + ' not the proper filename'
-    else:
-        result = result[0]
-        return result
+    result = result[0]
+    return result
+
 ######################
 
 """
@@ -96,19 +78,35 @@ def information(filename):
 """
 
 def ver():
-    '''Retrieve the current version of exiftool installed on your computer
-    '''
+    """ Version of Exiftool
+    
+    Retrieve the current version of exiftool installed on your computer
+    
+    Returns:
+        [string] -- a string in a list. i.e: ['9.46']
+    
+    Raises:
+        ValueError -- If you uninstalled or haven't installed yet Exiftool
+        than this should raise an error
+    """
     s = command_line(["exiftool","-ver"])
     if s:
         return s.split()
     else:
-        return 0
+        raise ValueError("You didn't install Exiftool on this Operating System")
 
 def get_json(filename):
-    '''Return a json value of the exif
-
-    '''
-    exit_if_this_file_does_not_exit(filename)
+    """ Return a json value of the exif
+    
+    Get a filename and return a JSON object
+    
+    Arguments:
+        filename {string} -- your filename
+    
+    Returns:
+        [JSON] -- Return a JSON object
+    """
+    check_if_this_file_exist(filename)
 
     #Process this function
     filename = os.path.abspath(filename)
@@ -118,13 +116,20 @@ def get_json(filename):
         s = s.decode('utf-8').rstrip('\r\n')
         return json.loads(s)
     else:
-        return filename
+        return s
 
 def get_csv(filename):
-    '''Return a csv representation of the exif
-    arg: filename
-    '''
-    exit_if_this_file_does_not_exit(filename)
+    """ Return a csv representation of the exif
+    
+    get a filename and returns a unicode string with a CSV format
+    
+    Arguments:
+        filename {string} -- your filename
+    
+    Returns:
+        [unicode] -- unicode string
+    """
+    check_if_this_file_exist(filename)
 
     #Process this function
     filename = os.path.abspath(filename)
@@ -137,8 +142,17 @@ def get_csv(filename):
         return 0
 
 def get_xml(filename):
-    '''Return a XML representation of the exif'''
-    exit_if_this_file_does_not_exit(filename)
+    """ Return a XML representation of the exif
+    
+    get a filename and return a unicode string  in a XML format
+    
+    Arguments:
+        filename {string} -- your filename
+    
+    Returns:
+        string -- a string formatted XML representation
+    """
+    check_if_this_file_exist(filename)
 
     #Process this function
     filename = os.path.abspath(filename)
