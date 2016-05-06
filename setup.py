@@ -53,7 +53,7 @@ setup(
 
     keywords='exiftool reader stats metadata image linux',
 
-    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    #packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
 
 
 )
