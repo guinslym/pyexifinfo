@@ -54,7 +54,7 @@ def exit_if_this_file_does_not_exit(filename):
         print(":( The filename that you gave me either does not exist")
         print("or it's a directory.")
         print("The given filename is: {0}".format(os.path.abspath(filename)))
-        sys.exit()
+        raise ValueError "Encountered error"
 
 ####HELPER section
 
@@ -79,8 +79,12 @@ def information(filename):
     exit_if_this_file_does_not_exit(filename)
     filename = os.path.abspath(filename)
     result = get_json(filename)
-    result = result[0]
-    return result
+    if not result:
+        message = 'The filename given is either a directory or \it \'s'
+        raise ValueError  message + ' not the proper filename'
+    else:
+        result = result[0]
+        return result
 ######################
 
 """
