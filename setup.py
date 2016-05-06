@@ -3,10 +3,51 @@
 #Imports
 from setuptools import setup, find_packages  # Always prefer setuptools over distutils
 from codecs import open  # To use a consistent encoding
+import os
 from os import path
 import sys
-from check_requirements import check_if_exiftool_is_already_installed
-from check_requirements import print_a_header
+import subprocess
+
+
+def print_a_header(message="-"):
+    """Header
+
+    This function will output a message in a header
+    
+    Keyword Arguments:
+        message {str} -- [the message string] (default: {"-"})
+    """
+    print("-".center(60,'-'))
+    print(message.center(60,'-'))
+    print("-".center(60,'-'))
+    print()
+
+def check_if_exiftool_is_already_installed():
+    """Requirements
+    
+    This function will check if Exiftool is installed
+    on your system
+
+    Return: True if Exiftool is Installed
+            False if not
+    """
+    result = 1;
+    command = ["exiftool", "-ver"]
+
+    with open(os.devnull, "w") as fnull:
+        result = subprocess.call(
+            command, 
+            stdout = fnull, 
+            stderr = fnull
+        )
+    #Exiftool is not installed
+    if result != 0:
+        print_a_header('Exiftool needs to be installed on your system')
+        print_a_header('Visit http://www.sno.phy.queensu.ca/~phil/exiftool/')
+        return False
+    else:
+        return True
+
 
 
 result = check_if_exiftool_is_already_installed()
