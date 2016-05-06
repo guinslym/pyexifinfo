@@ -1,6 +1,17 @@
 from setuptools import setup, find_packages  # Always prefer setuptools over distutils
 from codecs import open  # To use a consistent encoding
 from os import path
+import sys
+
+from check_requirements import check_if_exiftool_is_already_installed
+from check_requirements import print_a_header
+
+result = check_if_exiftool_is_already_installed()
+
+if not result:
+    sys.exit()
+else:
+    print_a_header("Great Exiftool is installed on your system!")
 
 here = path.abspath(path.dirname(__file__))
 
