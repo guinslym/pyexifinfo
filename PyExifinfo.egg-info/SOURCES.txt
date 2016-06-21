@@ -1,9 +1,0 @@
-README.rst
-setup.py
-PyExifinfo.egg-info/PKG-INFO
-PyExifinfo.egg-info/SOURCES.txt
-PyExifinfo.egg-info/dependency_links.txt
-PyExifinfo.egg-info/pbr.json
-PyExifinfo.egg-info/top_level.txt
-pyexifinfo/__init__.py
-pyexifinfo/pyexifinfo.py
