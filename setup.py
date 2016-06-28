@@ -60,13 +60,6 @@ def check_if_exiftool_is_already_installed():
 
 result = check_if_exiftool_is_already_installed()
 
-if not result:
-    print_frog()
-    print_a_header('Exiftool needs to be installed on your system')
-    print_a_header('Visit http://www.sno.phy.queensu.ca/~phil/exiftool/')
-    print_frog()
-
-
 
 #Begin the installation
 here = path.abspath(path.dirname(__file__))
@@ -74,7 +67,7 @@ here = path.abspath(path.dirname(__file__))
 setup(
     name='PyExifinfo',
 
-    version='0.3.0',
+    version='0.3.1',
 
     description="Simple Metadata extraction using Exiftool",
 
@@ -109,3 +102,10 @@ setup(
 
 
 )
+
+
+if not result:
+    print_frog()
+    print_a_header('Exiftool needs to be installed on your system')
+    print_a_header('Visit http://www.sno.phy.queensu.ca/~phil/exiftool/')
+    print_frog()
