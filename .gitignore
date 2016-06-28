@@ -1,15 +1,1 @@
-*.jpg
-/totrash
-man_exiftool.txt
-*.pyc
-build/
-.DS_Store
-.egg-info
-PyExifinfo.egg-info/
-.egg-info/
-*.egg-info/
-dist/
-PyExifinf*/*
-*.json
-*hello.py
-.cache/
+*__pycache__/
