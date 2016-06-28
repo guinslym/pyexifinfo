@@ -8,6 +8,16 @@ from os import path
 import sys
 import subprocess
 
+def print_frog():
+    frog ="""
+     "         _,-.   "
+     " ,-. ,--'  o )  "
+     " \\(,' '  ,,-'  "
+     ",-.\\-.__,\\\\_ "
+     "\\(`--'    `\\  "
+     ''
+    """
+    print(frog)
 
 def print_a_header(message="-"):
     """Header
@@ -48,9 +58,15 @@ def check_if_exiftool_is_already_installed():
     else:
         return True
 
-
-
 result = check_if_exiftool_is_already_installed()
+
+if not result:
+    print_frog()
+    print_a_header('Exiftool needs to be installed on your system')
+    print_a_header('Visit http://www.sno.phy.queensu.ca/~phil/exiftool/')
+    print_frog()
+
+
 
 #Begin the installation
 here = path.abspath(path.dirname(__file__))
@@ -58,7 +74,7 @@ here = path.abspath(path.dirname(__file__))
 setup(
     name='PyExifinfo',
 
-    version='0.2.9.1',
+    version='0.2.9.3',
 
     description="Simple Metadata extraction using Exiftool",
 
