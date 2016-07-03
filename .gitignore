@@ -3,3 +3,4 @@
 *egg.*
 PyExifinfo.egg-info/
 pyexifinfo.egg-info/
+.cache/

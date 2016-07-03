@@ -5,7 +5,9 @@ import csv
 #
 #
 # python logo (MIT)
-image = 'python-logo-master-v3-TM.png'
+import os
+TESTSDIR = os.path.dirname(os.path.realpath(__file__))
+image = TESTSDIR + '/python-logo-master-v3-TM.png'
 
 def test_version_is_greater_than_8():
     """ test the version is greater than 8 """

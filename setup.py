@@ -58,8 +58,6 @@ def check_if_exiftool_is_already_installed():
     else:
         return True
 
-result = check_if_exiftool_is_already_installed()
-
 
 #Begin the installation
 here = path.abspath(path.dirname(__file__))
@@ -67,7 +65,7 @@ here = path.abspath(path.dirname(__file__))
 setup(
     name='pyexifinfo',
 
-    version='0.3.3',
+    version='0.3.7',
 
     description="Simple Metadata extraction using Exiftool",
 
@@ -77,6 +75,7 @@ setup(
     author_email='guinslym@gmail.com',
 
     license='GNU GPLv2',
+    packages=['pyexifinfo'],
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -104,6 +103,7 @@ setup(
 )
 
 
+result = check_if_exiftool_is_already_installed()
 if not result:
     print_frog()
     print_a_header('Exiftool needs to be installed on your system')
