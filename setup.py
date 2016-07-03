@@ -65,9 +65,9 @@ result = check_if_exiftool_is_already_installed()
 here = path.abspath(path.dirname(__file__))
 
 setup(
-    name='PyExifinfo',
+    name='pyexifinfo',
 
-    version='0.3.2',
+    version='0.3.3',
 
     description="Simple Metadata extraction using Exiftool",
 

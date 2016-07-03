@@ -2,3 +2,4 @@
 */*.tar.gz
 *egg.*
 PyExifinfo.egg-info/
+pyexifinfo.egg-info/
