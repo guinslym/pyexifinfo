@@ -65,7 +65,7 @@ here = path.abspath(path.dirname(__file__))
 setup(
     name='pyexifinfo',
 
-    version='0.3.7',
+    version='0.3.8',
 
     description="Simple Metadata extraction using Exiftool",
 
