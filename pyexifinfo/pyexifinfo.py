@@ -54,8 +54,11 @@ def command_line(cmd):
     or a string for the command line output
     """
     try:
-        s = subprocess.check_output(cmd)
+        s = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+        s = s.stdout.read()
+        
         return s.strip()
+
     except subprocess.CalledProcessError:
         return 0
 
