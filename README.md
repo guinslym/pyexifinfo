@@ -66,7 +66,7 @@ print( json.dumps(data, sort_keys=True,
 ```
 
 ####With XML (rdf)
-```xml	
+```xml
 data = p.get_xml(filename)
 print(data)
 =>
@@ -170,3 +170,7 @@ result = mimeType(filename)
   DV    | KDC   | OGV   | RW2   |
 
  ```
+
+### Contributors
+-	[Guinsly Mondésir](https://github.com/guinslym/)
+-	[Andy Rosales Elias](https://github.com/andyyy60)
