@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import subprocess
-import subprocess
 import json
 import os
 import sys
@@ -17,10 +16,10 @@ import sys
 
 def check_if_this_file_exist(filename):
     """Check if this file exist and if it's a directory
-    
+
     This function will check if the given filename
     actually exists and if it's not a Directory
-    
+
     Arguments:
         filename {string} -- filename
 
@@ -56,7 +55,7 @@ def command_line(cmd):
     try:
         s = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         s = s.stdout.read()
-        
+
         return s.strip()
 
     except subprocess.CalledProcessError:
@@ -82,12 +81,12 @@ def information(filename):
 
 def ver():
     """ Version of Exiftool
-    
+
     Retrieve the current version of exiftool installed on your computer
-    
+
     Returns:
         [string] -- a string in a list. i.e: ['9.46']
-    
+
     Raises:
         ValueError -- If you uninstalled or haven't installed yet Exiftool
         than this should raise an error
@@ -100,12 +99,12 @@ def ver():
 
 def get_json(filename):
     """ Return a json value of the exif
-    
+
     Get a filename and return a JSON object
-    
+
     Arguments:
         filename {string} -- your filename
-    
+
     Returns:
         [JSON] -- Return a JSON object
     """
@@ -123,12 +122,12 @@ def get_json(filename):
 
 def get_csv(filename):
     """ Return a csv representation of the exif
-    
+
     get a filename and returns a unicode string with a CSV format
-    
+
     Arguments:
         filename {string} -- your filename
-    
+
     Returns:
         [unicode] -- unicode string
     """
@@ -146,12 +145,12 @@ def get_csv(filename):
 
 def get_xml(filename):
     """ Return a XML representation of the exif
-    
+
     get a filename and return a unicode string  in a XML format
-    
+
     Arguments:
         filename {string} -- your filename
-    
+
     Returns:
         string -- a string formatted XML representation
     """
@@ -167,7 +166,7 @@ def get_xml(filename):
         return s
     else:
         return 0
-        
+
 def fileType(filename):
     """Returns the file extension"""
     result =  information(filename)
@@ -177,6 +176,3 @@ def mimeType(filename):
     """Returns the file extension"""
     result =  information(filename)
     return result.get('File:MIMEType', 0)
-
-
-
