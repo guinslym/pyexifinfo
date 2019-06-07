@@ -1,6 +1,8 @@
+.mypy_cache/*
 *__pycache__/
 */*.tar.gz
 *egg.*
 PyExifinfo.egg-info/
 pyexifinfo.egg-info/
 .cache/
+Pipfile
